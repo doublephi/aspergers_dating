@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+#gem "bcrypt-ruby", "3.0.1", :require => 'bcrypt'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,20 +17,22 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+# group :assets do
+  # gem 'sass-rails',   '~> 3.2.3'
+  # gem 'coffee-rails', '~> 3.2.1'
+# 
+  # # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # # gem 'therubyracer'
+# 
+  # gem 'uglifier', '>= 1.0.3'
+# end
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+gem 'jquery-rails', '>= 1.0.3'
 
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
+#gem 'devise'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', "3.0.1", :require => 'bcrypt'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
