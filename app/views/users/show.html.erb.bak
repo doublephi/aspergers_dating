@@ -1,0 +1,32 @@
+<font size="1" face="verdana">
+<table width="100%">
+	<tr>
+		<td><b>Username</b></td>
+		<td><%= @user.username %></td>
+	</tr>
+	<tr>
+		<td><b>Age</b></td>
+		<td><%= @user.age %></td>
+	</tr>
+	<tr>
+		<td><b>Gender</b></td>
+		<td><%= @user.gender %></td>
+	</tr>
+	<tr>
+		<td><b>Height</b></td>
+		<td><%= @user.height %></td>
+	</tr>
+	<tr>
+		<td><b>Weight</b></td>
+		<td><%= @user.weight %></td>
+	</tr>
+	<tr>
+		<td><b>Description</b></td>
+		<td><%= @user.description %></td>
+	</tr>
+	<tr>
+		<td><b>Email</b></td>
+		<td><%= @user.email %></td>
+	</tr>
+</table>
+</font>
