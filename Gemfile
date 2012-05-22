@@ -30,6 +30,7 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'jquery-rails', '>= 1.0.3'
 
 gem 'devise'
+gem 'geocoder'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', "3.0.1", :require => 'bcrypt'
