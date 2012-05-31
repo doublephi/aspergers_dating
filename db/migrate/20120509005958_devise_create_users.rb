@@ -11,7 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :height
       t.integer :weight
       t.text :description
-      t.integer :zipcode
+      t.string :zipcode
       t.boolean :admin, :default => false
 
       # t.encryptable

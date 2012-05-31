@@ -3,9 +3,13 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+  # geocoding
+  geocoded_by :zipcode
+  after_validation :geocode, :if => :zipcode_changed?
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :username, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :zipcode
   
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
