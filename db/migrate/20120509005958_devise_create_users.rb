@@ -10,6 +10,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :gender
       t.integer :height
       t.integer :weight
+      t.string :marital_status
+      t.string :diagnostic_status
+      t.string :seeking
       t.text :description
       t.string :zipcode
       t.boolean :admin, :default => false
