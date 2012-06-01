@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
   after_validation :geocode, :if => :zipcode_changed?
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :zipcode
+  attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :zipcode,
+                  :height, :weight, :age, :description, :gender, :marital_status, :diagnostic_status,
+                  :seeking, :admin
   
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create

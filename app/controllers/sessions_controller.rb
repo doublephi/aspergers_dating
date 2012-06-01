@@ -1,6 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
   def new
-    puts "I like rape!"
   end
 #   
   # def create
