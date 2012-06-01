@@ -1,0 +1,20 @@
+<%= form_tag browse_path, :method => :get do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search Near", :name => nil %>
+	</p>
+<% end %>
+
+<table>
+	<tr>
+		<th>Username</th>
+		<th>Zip Code</th>
+	</tr>
+	<% for user in @users %>
+		<tr>
+			<td><%= user.username %></td>
+			<td><%= user.zipcode %></td>
+		</tr>
+	<% end %>
+</table>
+<%= will_paginate @users %>

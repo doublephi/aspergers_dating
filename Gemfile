@@ -31,6 +31,7 @@ gem 'jquery-rails', '>= 1.0.3'
 
 gem 'devise'
 gem 'geocoder'
+gem 'will_paginate', '~> 3.0'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', "3.0.1", :require => 'bcrypt'

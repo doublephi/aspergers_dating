@@ -6,6 +6,10 @@ class ProfilesController < ApplicationController
   end
   
   def browse
-    
+    if params[:search].present?
+      @users = User.near(params[:search], 25, :order => :distance).paginate(:page => params[:page])
+    else
+      @users = User.paginate(:page => params[:page])
+    end
   end
 end

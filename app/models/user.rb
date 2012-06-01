@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
+  #pagination
+  self.per_page = 25
+
   # geocoding
   geocoded_by :zipcode
   after_validation :geocode, :if => :zipcode_changed?

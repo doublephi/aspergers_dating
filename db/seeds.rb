@@ -8,7 +8,7 @@
 
 User.create(:email => "awmitchell@gmail.com", :password => "password", :password_confirmation => "password", :username => "awmitchell",
             :age => 27, :gender => "M", :height => "5.4", :weight => "160", :marital_status => "Single", :diagnostic_status => "Diagnosed",
-            :seeking => "Long-Term Relationship", :description => "Blah blah blah", :zipcode => "48116")
+            :seeking => "Long-Term Relationship", :description => "Blah blah blah", :zipcode => "48116", :admin => true)
 
 User.create(:email => "batch@thing.com", :password => "password", :password_confirmation => "password", :username => "batch",
             :age => 18, :gender => "M", :height => "5.7", :weight => "150", :marital_status => "Married", :diagnostic_status => "Undiagnosed",
