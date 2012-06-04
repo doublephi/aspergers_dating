@@ -1,8 +1,21 @@
 <%= form_tag browse_path, :method => :get do %>
-	<p>
-		<%= text_field_tag :search, params[:search] %>
-		<%= submit_tag "Search Near", :name => nil %>
-	</p>
+	<table>
+		<tr>
+			<td>City and State or ZIP / Miles:</td>
+			<td>
+				<%= text_field_tag :search, params[:search] %>
+				<%= select("distance", "miles", %w[5 10 15 20 25 50 100 250 500 1000 5000], {}, { :index => nil }) %>
+			</td>
+		</tr>
+		<tr>
+			<td>Testing:</td>
+			<td><%= text_field_tag :testing, params[:testing] %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= submit_tag "Browse", :name => nil %></td>
+		</tr>
+	</table>
 <% end %>
 
 <table>
