@@ -12,7 +12,69 @@
 	<%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-<table width="900" align="center">
+<table width="1148" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td height="2" width="100%" bgcolor="#000000"></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="2" bgcolor="#000000"></td>
+					<td width="1144" height="96" align="center" valign="middle">ASPIE AMORE</td>
+					<td width="2" bgcolor="#000000"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="2" width="100%" bgcolor="#000000"></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" height="30">
+				<tr>
+					<td width="2" bgcolor="#000000"></td>
+					<td><%= image_tag "home.jpg", :alt => "Home" %></td>
+					<td width="2" bgcolor="#000000"></td>
+					<td><%= image_tag "messages.jpg", :alt => "Messages" %></td>
+					<td><%= image_tag "mystuff.jpg", :alt => "My Stuff" %></td>
+					<td><%= link_to image_tag("search.jpg", :alt => "Search"), browse_path %></td>
+					<td><%= image_tag "community.jpg", :alt => "Community" %></td>
+					<td><%= image_tag "help.jpg", :alt => "Help" %></td>
+					<td width="1"></td>
+					<td width="2" bgcolor="#000000"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="2" width="100%" bgcolor="#000000"></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="2" bgcolor="#000000"></td>
+					<td width="146" valign="top">
+						<b><u>Online Friends:</u></b><br /><br />
+						<b><u>Online Favorites:</u></b>
+					</td>
+					<td width="2" bgcolor="#000000"></td>
+					<td width="996" align="left" valign="top">
+						<%= yield %>
+					</td>
+					<td width="2" bgcolor="#000000"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="2" width="100%" bgcolor="#000000"></td>
+	</tr>
+</table>
+
+<!-- <table width="900" align="center">
 	<tr>
 		<td align="left">
 			<font face="verdana" size="1">
@@ -43,6 +105,6 @@
 	<tr>
 		<td align="center" colspan="2"><font face="verdana" size="1">Footer Stuff</font></td>
 	</tr>
-</table>
+</table> -->
 </body>
 </html>
