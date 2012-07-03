@@ -8,8 +8,111 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Testing:</td>
-			<td><%= text_field_tag :testing, params[:testing] %></td>
+			<td>Username:</td>
+			<td><%= text_field_tag :username, params[:username] %></td>
+		</tr>
+		<tr>
+			<td>Keyword:</td>
+			<td><%= text_field_tag :keyword, params[:keyword]%></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Gender:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'gender[]', 'male'%> Male</td>
+							<td><%= check_box_tag 'gender[]', 'female'%> Female</td>
+							<td><%= check_box_tag 'gender[]', 'both'%> Both</td>
+						</tr>
+						<tr>
+							<td><%= check_box_tag 'gender[]', 'genderqueer' %> Genderqueer</td>
+							<td><%= check_box_tag 'gender[]', 'transgendered' %> Transgendered</td>
+							<td></td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Diagnostic Status:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'diagnosis[]', 'official' %> Official</td>
+							<td><%= check_box_tag 'diagnosis[]', 'self-diagnosed' %> Self-Diagnosed</td>
+						</tr>
+						<tr>
+							<td><%= check_box_tag 'diagnosis[]', 'suspected' %> Suspected</td>
+							<td><%= check_box_tag 'diagnosis[]', 'neurotypical' %> Neurotypical</td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Orientation:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'orientation[]', 'straight' %> Straight</td>
+							<td><%= check_box_tag 'orientation[]', 'gay' %> Gay</td>
+							<td><%= check_box_tag 'orientation[]', 'bi' %> Bisexual</td>
+						</tr>
+						<tr>
+							<td><%= check_box_tag 'orientation[]', 'queer' %> Queer</td>
+							<td><%= check_box_tag 'orientation[]', 'asexual' %> Asexual</td>
+							<td></td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Looking For:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'lookingfor[]', 'straight' %> Dating</td>
+							<td><%= check_box_tag 'lookingfor[]', 'gay' %> Friends</td>
+							<td><%= check_box_tag 'lookingfor[]', 'bi' %> Hook-Ups</td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Social Preference:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'socialpref[]', 'social' %> Social</td>
+							<td><%= check_box_tag 'socialpref[]', 'sometimes' %> Sometimes Social</td>
+						</tr>
+						<tr>
+							<td><%= check_box_tag 'socialpref[]', 'smallgroups' %> Small Groups Only</td>
+							<td><%= check_box_tag 'socialpref[]', 'oneonone' %> One on One</td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Smoker:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'smoker[]', 'yes' %> Yes</td>
+							<td><%= check_box_tag 'smoker[]', 'no' %> No</td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
 		</tr>
 		<tr>
 			<td></td>

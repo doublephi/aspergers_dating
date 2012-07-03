@@ -35,7 +35,7 @@
 			<table cellpadding="0" cellspacing="0" border="0" height="30">
 				<tr>
 					<td width="2" bgcolor="#000000"></td>
-					<td><%= image_tag "home.jpg", :alt => "Home" %></td>
+					<td><%= link_to image_tag("home.jpg", :alt => "Home"), root_path %></td>
 					<td width="2" bgcolor="#000000"></td>
 					<td><%= image_tag "messages.jpg", :alt => "Messages" %></td>
 					<td><%= image_tag "mystuff.jpg", :alt => "My Stuff" %></td>
@@ -57,7 +57,7 @@
 				<tr>
 					<td width="2" bgcolor="#000000"></td>
 					<td width="146" valign="top">
-						<b><u>Online Friends:</u></b><br /><br />
+						<b><u>Online Friends:</u></b><br />
 						<b><u>Online Favorites:</u></b>
 					</td>
 					<td width="2" bgcolor="#000000"></td>
