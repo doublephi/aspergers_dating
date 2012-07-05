@@ -6,14 +6,28 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
-User.create(:email => "awmitchell@gmail.com", :password => "password", :password_confirmation => "password", :username => "awmitchell",
-            :age => 27, :gender => "M", :height => "5.4", :weight => "160", :marital_status => "Single", :diagnostic_status => "Diagnosed",
-            :seeking => "Long-Term Relationship", :description => "Blah blah blah", :zipcode => "48116", :admin => true)
+User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :password => "password", :password_confirmation => "password",
+            :age => 27, :gender => "Male", :height_feet => "5", :height_inches => "4", :weight => "160", :zipcode => "48116",
+            :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
+            :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
+            :religion => "Atheist",
+            :about => "Here's some about me stuff.",
+            :diagnosis_story => "The doctor did it.",
+            :special_needs => "I like stuff.",
+            :things_i_do => "I do some stuff.",
+            :things_i_dont_do => "I don't do some other stuff",
+            :obsessions => "Physics, Computers, Hockey", :who_id_like_to_meet => "Girls",
+            :seven_things_i_adore => "One, Two, Three, Four, Five, Six, Seven")
 
-User.create(:email => "batch@thing.com", :password => "password", :password_confirmation => "password", :username => "batch",
-            :age => 18, :gender => "M", :height => "5.7", :weight => "150", :marital_status => "Married", :diagnostic_status => "Undiagnosed",
-            :seeking => "Platonic", :description => "Blah blah blah", :zipcode => "48393")
-
-User.create(:email => "herp@derp.com", :password => "password", :password_confirmation => "password", :username => "herpderp",
-            :age => 40, :gender => "F", :height => "6.10", :weight => "250", :marital_status => "In A Relationship", :diagnostic_status => "Self-Diagnosed",
-            :seeking => "Poly Relationship", :description => "Blah blah blah", :zipcode => "03901")
+User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :password => "password", :password_confirmation => "password",
+            :age => 21, :gender => "Male", :height_feet => "5", :height_inches => "7", :weight => "200", :zipcode => "48393",
+            :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
+            :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
+            :religion => "Atheist",
+            :about => "Here's some about me stuff.",
+            :diagnosis_story => "The doctor did it.",
+            :special_needs => "I like stuff.",
+            :things_i_do => "I do some stuff.",
+            :things_i_dont_do => "I don't do some other stuff",
+            :obsessions => "Physics, Computers, Hockey", :who_id_like_to_meet => "Girls",
+            :seven_things_i_adore => "One, Two, Three, Four, Five, Six, Seven")
