@@ -19,7 +19,7 @@ User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :passwo
             :obsessions => "Physics, Computers, Hockey", :who_id_like_to_meet => "Girls",
             :seven_things_i_adore => "One, Two, Three, Four, Five, Six, Seven")
 
-User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :password => "password", :password_confirmation => "password",
+User.create(:email => "no@college.com", :username => "herpderp", :password => "password", :password_confirmation => "password",
             :age => 21, :gender => "Male", :height_feet => "5", :height_inches => "7", :weight => "200", :zipcode => "48393",
             :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
