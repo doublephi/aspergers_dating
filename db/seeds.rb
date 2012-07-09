@@ -1,13 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Emanuel', :city => cities.first)
-
 User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :password => "password", :password_confirmation => "password",
-            :age => 27, :gender => "Male", :height_feet => "5", :height_inches => "4", :weight => "160", :zipcode => "48116",
+            :age => 27, :gender => "Male", :height_feet => 5, :height_inches => 4, :weight => 160, :zipcode => "48116",
             :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
             :religion => "Atheist",
@@ -20,7 +12,7 @@ User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :passwo
             :seven_things_i_adore => "One, Two, Three, Four, Five, Six, Seven")
 
 User.create(:email => "no@college.com", :username => "herpderp", :password => "password", :password_confirmation => "password",
-            :age => 21, :gender => "Male", :height_feet => "5", :height_inches => "7", :weight => "200", :zipcode => "48393",
+            :age => 21, :gender => "Male", :height_feet => 5, :height_inches => 7, :weight => 200, :zipcode => "48393",
             :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
             :religion => "Atheist",

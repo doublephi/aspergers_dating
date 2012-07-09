@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :user_pictures
+  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -13,8 +15,11 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :zipcode,
-                  :height, :weight, :age, :description, :gender, :marital_status, :diagnostic_status,
-                  :seeking, :admin
+                  :height_feet, :height_inches, :weight, :age, :description, :gender, :marital_status,
+                  :diagnostic_status, :looking_for, :orientation, :body_type, :smoke, :drink, 
+                  :social_preference, :sign, :religion, :about, :diagnosis_story, :special_needs,
+                  :things_i_do, :things_i_dont_do, :obsessions, :who_id_like_to_meet, :seven_things_i_adore,
+                  :admin
   
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create

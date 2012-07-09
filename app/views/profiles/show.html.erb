@@ -14,19 +14,27 @@
 	</tr>
 	<tr>
 		<td><b>Height</b></td>
-		<td><%= @user.height %></td>
+		<td><%= @user.height_feet %>' <%= @user.height_inches %>"</td>
 	</tr>
 	<tr>
 		<td><b>Weight</b></td>
 		<td><%= @user.weight %></td>
 	</tr>
 	<tr>
-		<td><b>Description</b></td>
-		<td><%= @user.description %></td>
+		<td><b>About</b></td>
+		<td><%= @user.about %></td>
 	</tr>
 	<tr>
 		<td><b>Email</b></td>
 		<td><%= @user.email %></td>
+	</tr>
+	<tr>
+		<td><b>Pictures</b></td>
+		<td>
+			<% @user.user_pictures.each do |n| %>
+				<%= image_tag n.picture.url(:thumb) %> 
+			<% end %>
+		</td>
 	</tr>
 </table>
 </font>
