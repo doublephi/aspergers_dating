@@ -3,8 +3,8 @@
 		<tr>
 			<td>City and State or ZIP / Miles:</td>
 			<td>
-				<%= text_field_tag :search, params[:search] %>
-				<%= select("distance", "miles", %w[5 10 15 20 25 50 100 250 500 1000 5000], {}, { :index => nil }) %>
+				<%= text_field_tag :place, params[:place] %>
+				<%= select("distance", "miles", %w[5 10 15 20 25 50 100 250 500 1000 5000 24901.55], {}, { :index => nil }) %>
 			</td>
 		</tr>
 		<tr>
@@ -23,11 +23,10 @@
 						<tr>
 							<td><%= check_box_tag 'gender[]', 'male'%> Male</td>
 							<td><%= check_box_tag 'gender[]', 'female'%> Female</td>
-							<td><%= check_box_tag 'gender[]', 'both'%> Both</td>
 						</tr>
 						<tr>
 							<td><%= check_box_tag 'gender[]', 'genderqueer' %> Genderqueer</td>
-							<td><%= check_box_tag 'gender[]', 'transgendered' %> Transgendered</td>
+							<td><%= check_box_tag 'gender[]', 'trans' %> Transgendered</td>
 							<td></td>
 						</tr>
 					</table>
@@ -40,12 +39,12 @@
 				<%= field_set_tag do %>
 					<table cellpadding="0" cellspacing="0" border="0">
 						<tr>
-							<td><%= check_box_tag 'diagnosis[]', 'official' %> Official</td>
+							<td><%= check_box_tag 'diagnosis[]', 'confirmed' %> Confirmed</td>
 							<td><%= check_box_tag 'diagnosis[]', 'self-diagnosed' %> Self-Diagnosed</td>
 						</tr>
 						<tr>
 							<td><%= check_box_tag 'diagnosis[]', 'suspected' %> Suspected</td>
-							<td><%= check_box_tag 'diagnosis[]', 'neurotypical' %> Neurotypical</td>
+							<td><%= check_box_tag 'diagnosis[]', 'nt' %> Neurotypical</td>
 						</tr>
 					</table>
 				<% end %>
@@ -59,10 +58,11 @@
 						<tr>
 							<td><%= check_box_tag 'orientation[]', 'straight' %> Straight</td>
 							<td><%= check_box_tag 'orientation[]', 'gay' %> Gay</td>
-							<td><%= check_box_tag 'orientation[]', 'bi' %> Bisexual</td>
+							<td><%= check_box_tag 'orientation[]', 'bisexual' %> Bisexual</td>
 						</tr>
 						<tr>
 							<td><%= check_box_tag 'orientation[]', 'queer' %> Queer</td>
+							<td><%= check_box_tag 'orientation[]', 'trans' %> Trans</td>
 							<td><%= check_box_tag 'orientation[]', 'asexual' %> Asexual</td>
 							<td></td>
 						</tr>
@@ -76,9 +76,10 @@
 				<%= field_set_tag do %>
 					<table cellpadding="0" cellspacing="0" border="0">
 						<tr>
-							<td><%= check_box_tag 'lookingfor[]', 'straight' %> Dating</td>
-							<td><%= check_box_tag 'lookingfor[]', 'gay' %> Friends</td>
-							<td><%= check_box_tag 'lookingfor[]', 'bi' %> Hook-Ups</td>
+							<td><%= check_box_tag 'lookingfor[]', 'love' %> Love</td>
+							<td><%= check_box_tag 'lookingfor[]', 'dating' %> Dating</td>
+							<td><%= check_box_tag 'lookingfor[]', 'friends' %> Friends</td>
+							<td><%= check_box_tag 'lookingfor[]', 'hook-ups' %> Hook-Ups</td>
 						</tr>
 					</table>
 				<% end %>
@@ -94,8 +95,8 @@
 							<td><%= check_box_tag 'socialpref[]', 'sometimes' %> Sometimes Social</td>
 						</tr>
 						<tr>
-							<td><%= check_box_tag 'socialpref[]', 'smallgroups' %> Small Groups Only</td>
-							<td><%= check_box_tag 'socialpref[]', 'oneonone' %> One on One</td>
+							<td><%= check_box_tag 'socialpref[]', 'small-groups' %> Small Groups Only</td>
+							<td><%= check_box_tag 'socialpref[]', 'one-on-one' %> One on One</td>
 						</tr>
 					</table>
 				<% end %>
@@ -107,8 +108,21 @@
 				<%= field_set_tag do %>
 					<table cellpadding="0" cellspacing="0" border="0">
 						<tr>
-							<td><%= check_box_tag 'smoker[]', 'yes' %> Yes</td>
-							<td><%= check_box_tag 'smoker[]', 'no' %> No</td>
+							<td><%= check_box_tag 'smoke[]', 'yes' %> Yes</td>
+							<td><%= check_box_tag 'smoke[]', 'no' %> No</td>
+						</tr>
+					</table>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Drinker:
+				<%= field_set_tag do %>
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td><%= check_box_tag 'drink[]', 'yes' %> Yes</td>
+							<td><%= check_box_tag 'drink[]', 'no' %> No</td>
 						</tr>
 					</table>
 				<% end %>

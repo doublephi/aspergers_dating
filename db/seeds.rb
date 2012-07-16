@@ -1,7 +1,7 @@
 User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :password => "password", :password_confirmation => "password",
             :age => 27, :gender => "Male", :height_feet => 5, :height_inches => 4, :weight => 160, :zipcode => "48116",
             :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
-            :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
+            :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "small-groups", :sign => "Taurus",
             :religion => "Atheist",
             :about => "Here's some about me stuff.",
             :diagnosis_story => "The doctor did it.",
@@ -14,7 +14,7 @@ User.create(:email => "awmitchell@gmail.com", :username => "awmitchell", :passwo
 User.create(:email => "no@college.com", :username => "herpderp", :password => "password", :password_confirmation => "password",
             :age => 21, :gender => "Male", :height_feet => 5, :height_inches => 7, :weight => 200, :zipcode => "48393",
             :marital_status => "Single", :diagnostic_status => "Diagnosed", :orientation => "Straight", :looking_for => "Dating",
-            :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "Small Groups Only", :sign => "Taurus",
+            :body_type => "Average", :smoke => "No", :drink => "No", :social_preference => "small-groups", :sign => "Taurus",
             :religion => "Atheist",
             :about => "Here's some about me stuff.",
             :diagnosis_story => "The doctor did it.",
@@ -72,7 +72,7 @@ User.create(:email => "bt@afjk.com", :username =>
             :marital_status => "Poly", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Thin", :smoke => "Yes", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Gemini",
+:social_preference => "small-groups", :sign => "Gemini",
             :religion => "Religious",
             :about => "ooh shiny",
             :diagnosis_story => "AS story",
@@ -89,7 +89,7 @@ User.create(:email => "obiwan@helpme.net", :username =>
             :age => 19, :gender => "trans", :height_feet => 6,
 :height_inches => 0, :weight => 200, :zipcode => "74023",
             :marital_status => "Single", :diagnostic_status =>
-"Self", :orientation => "Bisexual", :looking_for => "Casual Encounters",
+"self-diagnosed", :orientation => "Bisexual", :looking_for => "Casual Encounters",
             :body_type => "Full-Figured", :smoke => "No", :drink => "Yes",
 :social_preference => "Sometimes", :sign => "Virgo",
             :religion => "Agnostic",
@@ -110,7 +110,7 @@ User.create(:email => "jk456@jkjk.com", :username =>
             :marital_status => "Taken", :diagnostic_status =>
 "NT", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Athletic", :smoke => "No", :drink => "Yes",
-:social_preference => "One on one", :sign => "Cancer",
+:social_preference => "one-on-one", :sign => "Cancer",
             :religion => "Atheist",
             :about => "Sports",
             :diagnosis_story => "Just an NT man",
@@ -129,7 +129,7 @@ User.create(:email => "ooah@glitch.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Gay", :looking_for => "Dating, casual encounters",
             :body_type => "Thin", :smoke => "yes", :drink => "yes",
-:social_preference => "Small groups", :sign => "Leo",
+:social_preference => "small-groups", :sign => "Leo",
             :religion => "Agnostic",
             :about => "oobledeegoogledeegook",
             :diagnosis_story => "They",
@@ -143,12 +143,12 @@ User.create(:email => "ooah@glitch.com", :username =>
 User.create(:email => "nom@nomnom.com", :username =>
 "Nomleenoms", :password => "fudser", :password_confirmation =>
 "fudser",
-            :age => 19, :gender => "Gender Queer", :height_feet => 5,
+            :age => 19, :gender => "genderqueer", :height_feet => 5,
 :height_inches => 2, :weight => 105, :zipcode => "E7U 1HN",
             :marital_status => "In an Open Relationship", :diagnostic_status =>
 "Confirmed", :orientation => "Bisexual", :looking_for => "Dating, casual encounters",
             :body_type => "Tiny", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Pisces",
+:social_preference => "small-groups", :sign => "Pisces",
             :religion => "Religious",
             :about => "ooh",
             :diagnosis_story => "typical",
@@ -165,9 +165,9 @@ User.create(:email => "lee@vancreep.com", :username =>
             :age => 30, :gender => "Male", :height_feet => 6,
 :height_inches => 3, :weight => 210, :zipcode => "41868",
             :marital_status => "Married", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Friendship",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Friendship",
             :body_type => "Solid", :smoke => "No", :drink => "No",
-:social_preference => "One on one", :sign => "Scorpio",
+:social_preference => "one-on-one", :sign => "Scorpio",
             :religion => "Atheist",
             :about => "spins",
             :diagnosis_story => "I know these things",
@@ -186,7 +186,7 @@ User.create(:email => "unodostres@cuanto.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Bisexual", :looking_for => "Dating, Friends",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Capricorn",
+:social_preference => "small-groups", :sign => "Capricorn",
             :religion => "Agnostic",
             :about => "paintor",
             :diagnosis_story => "She called it",
@@ -243,7 +243,7 @@ User.create(:email => "ouch@owowow.net", :username =>
             :marital_status => "poly", :diagnostic_status =>
 "Confirmed", :orientation => "bisexual", :looking_for => "love",
             :body_type => "full figured", :smoke => "yes", :drink => "yes",
-:social_preference => "Small groups", :sign => "Saggitarius",
+:social_preference => "small-groups", :sign => "Saggitarius",
             :religion => "Believer",
             :about => "t quam augue, sit amet rutrum",
             :diagnosis_story => "t quam augue, sit amet rutrum",
@@ -279,9 +279,9 @@ User.create(:email => "id@ego.net", :username =>
             :age => 50, :gender => "female", :height_feet => 5,
 :height_inches => 9, :weight => 200, :zipcode => "09685",
             :marital_status => "married", :diagnostic_status =>
-"self", :orientation => "straight", :looking_for => "love",
+"self-diagnosed", :orientation => "straight", :looking_for => "love",
             :body_type => "full figured", :smoke => "no", :drink => "no",
-:social_preference => "one on one", :sign => "Taurus",
+:social_preference => "one-on-one", :sign => "Taurus",
             :religion => "Vestibulum elit nisl, sagittis ut cursus at",
             :about => "Vestibulum elit nisl, sagittis ut cursus at",
             :diagnosis_story => "Vestibulum elit nisl, sagittis ut cursus at",
@@ -298,7 +298,7 @@ User.create(:email => "holdmeclose@fluxpavillion.com", :username =>
             :age => 19, :gender => "Female", :height_feet => 5,
 :height_inches => 5, :weight => 110, :zipcode => "V8O 7I5",
             :marital_status => "single", :diagnostic_status =>
-"Self", :orientation => "Straight", :looking_for => "Friends, Dating, Hook-Ups, Love",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Friends, Dating, Hook-Ups, Love",
             :body_type => "Thin", :smoke => "socially", :drink => "yes",
 :social_preference => "Social", :sign => "Aries",
             :religion => "luctus sit amet odio",
@@ -338,7 +338,7 @@ User.create(:email => "fulsto@nine.com", :username =>
             :marital_status => "open relationship", :diagnostic_status =>
 "Confirmed", :orientation => "Gay", :looking_for => "love",
             :body_type => "Full figured", :smoke => "No", :drink => "Socially",
-:social_preference => "Small Groups", :sign => "Virgo",
+:social_preference => "small-groups", :sign => "Virgo",
             :religion => "odio arcu scelerisque enim",
             :about => "odio arcu scelerisque enim",
             :diagnosis_story => "odio arcu scelerisque enim",
@@ -376,7 +376,7 @@ User.create(:email => "fox@soccer.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Athletic", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Leo",
+:social_preference => "one-on-one", :sign => "Leo",
             :religion => "ellentesque lectus eros",
             :about => "ellentesque lectus eros",
             :diagnosis_story => "ellentesque lectus eros",
@@ -393,7 +393,7 @@ User.create(:email => "fifa@addict.com", :username =>
             :age => 18, :gender => "Male", :height_feet => 5,
 :height_inches => 10, :weight => 150, :zipcode => "72534",
             :marital_status => "Single", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Bisexual", :looking_for => "Dating",
+"self-diagnosed", :orientation => "Bisexual", :looking_for => "Dating",
             :body_type => "Thin", :smoke => "yes", :drink => "yes",
 :social_preference => "Social", :sign => "Cancer",
             :religion => "euismod ut elementum eu",
@@ -433,7 +433,7 @@ User.create(:email => "spawn@elizabeth.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Straight", :looking_for => "Love",
             :body_type => "BBW", :smoke => "Yes", :drink => "Yes",
-:social_preference => "One on One", :sign => "Gemini",
+:social_preference => "one-on-one", :sign => "Gemini",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -471,7 +471,7 @@ User.create(:email => "iwill@nevergo.com", :username =>
             :marital_status => "Seeing Someone", :diagnostic_status =>
 "NT", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "One on One", :sign => "Gemini",
+:social_preference => "one-on-one", :sign => "Gemini",
             :religion => "Atheist",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -509,7 +509,7 @@ User.create(:email => "Trespassers@william.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Gay", :looking_for => "Dating, Love",
             :body_type => "Jacked", :smoke => "No", :drink => "Socially",
-:social_preference => "Small Groups", :sign => "Aries",
+:social_preference => "small-groups", :sign => "Aries",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -528,7 +528,7 @@ User.create(:email => "Williams@Trespassers.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Trans", :looking_for => "Dating",
             :body_type => "Tiny", :smoke => "No", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Virgo",
+:social_preference => "small-groups", :sign => "Virgo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -561,12 +561,12 @@ User.create(:email => "seventy@sixteen.com", :username =>
 User.create(:email => "sarah@mclachlan.edu", :username =>
 "sweetsurrender", :password => "password", :password_confirmation =>
 "password",
-            :age => 19, :gender => "Gender Queer", :height_feet => 5,
+            :age => 19, :gender => "genderqueer", :height_feet => 5,
 :height_inches => 6, :weight => 145, :zipcode => "2921",
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Trans", :looking_for => "Love",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Taurus",
+:social_preference => "small-groups", :sign => "Taurus",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -583,9 +583,9 @@ User.create(:email => "above@beyond.net", :username =>
             :age => 45, :gender => "Female", :height_feet => 5,
 :height_inches => 3, :weight => 120, :zipcode => "I7F 2R0",
             :marital_status => "Poly", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Bisexual", :looking_for => "Dating, Love, Friends",
+"self-diagnosed", :orientation => "Bisexual", :looking_for => "Dating, Love, Friends",
             :body_type => "Thin", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Scorpio",
+:social_preference => "small-groups", :sign => "Scorpio",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -604,7 +604,7 @@ User.create(:email => "dreamon@dreamer.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Friends, Love",
             :body_type => "Tiny", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Leo",
+:social_preference => "one-on-one", :sign => "Leo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -623,7 +623,7 @@ User.create(:email => "dhaj@pck.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Jacked", :smoke => "No", :drink => "Socially",
-:social_preference => "Small Groups", :sign => "Pisces",
+:social_preference => "small-groups", :sign => "Pisces",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -642,7 +642,7 @@ User.create(:email => "Egould@ing.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Gay", :looking_for => "Friends, Dating",
             :body_type => "Curvy", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Leo",
+:social_preference => "one-on-one", :sign => "Leo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -659,7 +659,7 @@ User.create(:email => "nexthing@touching.net", :username =>
             :age => 43, :gender => "Female", :height_feet => 5,
 :height_inches => 2, :weight => 234, :zipcode => "77770",
             :marital_status => "Single", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Love",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Love",
             :body_type => "Massive", :smoke => "No", :drink => "Yes",
 :social_preference => "Social", :sign => "Libra",
             :religion => "Ut eu velit in augue blandit fermentum",
@@ -699,7 +699,7 @@ User.create(:email => "wompasaurus@rex.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Trans", :looking_for => "Love, Friends",
             :body_type => "Tiny", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Capricorn",
+:social_preference => "small-groups", :sign => "Capricorn",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -713,7 +713,7 @@ User.create(:email => "wompasaurus@rex.net", :username =>
 User.create(:email => "silence@believe.com", :username =>
 "witnessme", :password => "password", :password_confirmation =>
 "password",
-            :age => 23, :gender => "Gender Queer", :height_feet => 5,
+            :age => 23, :gender => "genderqueer", :height_feet => 5,
 :height_inches => 3, :weight => 140, :zipcode => "69045",
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Asexual", :looking_for => "Friends",
@@ -775,7 +775,7 @@ User.create(:email => "someday@mypain.net", :username =>
             :marital_status => "Married", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "love",
             :body_type => "Full Figured", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Cancer",
+:social_preference => "one-on-one", :sign => "Cancer",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -792,7 +792,7 @@ User.create(:email => "dootdoot@dootydoot.com", :username =>
             :age => 28, :gender => "Male", :height_feet => 6,
 :height_inches => 0, :weight => 100, :zipcode => "94649",
             :marital_status => "Poly", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Friends, Dating",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Friends, Dating",
             :body_type => "Average", :smoke => "No", :drink => "No",
 :social_preference => "Social", :sign => "Virgo",
             :religion => "Ut eu velit in augue blandit fermentum",
@@ -813,7 +813,7 @@ User.create(:email => "bwupbwup@bop.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Bisexual", :looking_for => "Friends",
             :body_type => "Tiny", :smoke => "Yes", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Cancer",
+:social_preference => "small-groups", :sign => "Cancer",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -851,7 +851,7 @@ User.create(:email => "electricity@mind.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Friends, Dating",
             :body_type => "Athletic", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Leo",
+:social_preference => "small-groups", :sign => "Leo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -908,7 +908,7 @@ User.create(:email => "lana@delray.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Asexual", :looking_for => "Friends",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "One on One", :sign => "Virgo",
+:social_preference => "one-on-one", :sign => "Virgo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -925,9 +925,9 @@ User.create(:email => "thisisthe@lasttime.com", :username =>
             :age => 23, :gender => "Male", :height_feet => 5,
 :height_inches => 6, :weight => 100, :zipcode => "66939",
             :marital_status => "Single", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Dating",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Average", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Leo",
+:social_preference => "small-groups", :sign => "Leo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -984,7 +984,7 @@ User.create(:email => "comehome@arty.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Aquarius",
+:social_preference => "small-groups", :sign => "Aquarius",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1079,7 +1079,7 @@ User.create(:email => "waitinthewings@burst.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Gay", :looking_for => "Dating",
             :body_type => "Full Figured", :smoke => "No", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Scorpio",
+:social_preference => "small-groups", :sign => "Scorpio",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1231,7 +1231,7 @@ User.create(:email => "Righton@phew.com", :username =>
             :marital_status => "Seeing Someone", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Pisces",
+:social_preference => "small-groups", :sign => "Pisces",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1250,7 +1250,7 @@ User.create(:email => "BTArty@mustbe.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Bisexual", :looking_for => "Friends",
             :body_type => "Thin", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Aries",
+:social_preference => "one-on-one", :sign => "Aries",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1264,7 +1264,7 @@ User.create(:email => "BTArty@mustbe.com", :username =>
 User.create(:email => "HopeIAm@alright.com", :username =>
 "BitByBit", :password => "password", :password_confirmation =>
 "password",
-            :age => 42, :gender => "Gender Queer", :height_feet => 5,
+            :age => 42, :gender => "genderqueer", :height_feet => 5,
 :height_inches => 3, :weight => 100, :zipcode => "K6Q 8V5",
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Gay", :looking_for => "Friends, Dating",
@@ -1307,7 +1307,7 @@ User.create(:email => "blazeone@tothebeat.com", :username =>
             :marital_status => "Married", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Jacked", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Leo",
+:social_preference => "small-groups", :sign => "Leo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1326,7 +1326,7 @@ User.create(:email => "irelate@withhim.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Average", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Scorpio",
+:social_preference => "one-on-one", :sign => "Scorpio",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1362,7 +1362,7 @@ User.create(:email => "tryingnottolose@myfaith.com", :username =>
             :age => 20, :gender => "Female", :height_feet => 6,
 :height_inches => 2, :weight => 150, :zipcode => "D6Y 9E7",
             :marital_status => "Poly", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Bisexual", :looking_for => "Friends, Dating",
+"self-diagnosed", :orientation => "Bisexual", :looking_for => "Friends, Dating",
             :body_type => "Average", :smoke => "No", :drink => "No",
 :social_preference => "Social", :sign => "Scorpio",
             :religion => "Ut eu velit in augue blandit fermentum",
@@ -1402,7 +1402,7 @@ User.create(:email => "jorbs@jorbledee.com", :username =>
             :marital_status => "Married", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Love",
             :body_type => "Average", :smoke => "No", :drink => "Yes",
-:social_preference => "One on One", :sign => "Virgo",
+:social_preference => "one-on-one", :sign => "Virgo",
             :religion => "Ut eu velit in augue blandit fermentum",
             :about => "Ut eu velit in augue blandit fermentum",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum",
@@ -1416,12 +1416,12 @@ User.create(:email => "jorbs@jorbledee.com", :username =>
 User.create(:email => "masters@clinical.com", :username =>
 "differentstates", :password => "password", :password_confirmation =>
 "password",
-            :age => 55, :gender => "Gender Queer", :height_feet => 5,
+            :age => 55, :gender => "genderqueer", :height_feet => 5,
 :height_inches => 10, :weight => 300, :zipcode => "05887",
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Gay", :looking_for => "Dating, Love",
             :body_type => "BBW", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Leo",
+:social_preference => "small-groups", :sign => "Leo",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1497,7 +1497,7 @@ User.create(:email => "makethemost@ofit.com", :username =>
             :marital_status => "Married", :diagnostic_status =>
 "Confirmed", :orientation => "Gay", :looking_for => "Love",
             :body_type => "Full Figured", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Pisces",
+:social_preference => "one-on-one", :sign => "Pisces",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1530,7 +1530,7 @@ User.create(:email => "loremipsum@allthefacts.com", :username =>
 User.create(:email => "Iwouldgivemylife@tobeyours.com", :username =>
 "777Neighbor", :password => "password", :password_confirmation =>
 "password",
-            :age => 31, :gender => "Gender Queer", :height_feet => 5,
+            :age => 31, :gender => "genderqueer", :height_feet => 5,
 :height_inches => 0, :weight => 100, :zipcode => "A9Q 6U7",
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Straight", :looking_for => "Dating, Love",
@@ -1630,7 +1630,7 @@ User.create(:email => "ohohoh@starryeyed.net", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Suspected", :orientation => "Straight", :looking_for => "Love",
             :body_type => "BBW", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Aries",
+:social_preference => "one-on-one", :sign => "Aries",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1647,7 +1647,7 @@ User.create(:email => "basswompies@oohbaby.com", :username =>
             :age => 29, :gender => "Female", :height_feet => 6,
 :height_inches => 9, :weight => 130, :zipcode => "36673",
             :marital_status => "Single", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Dating",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Dating",
             :body_type => "Thin", :smoke => "No", :drink => "No",
 :social_preference => "Social", :sign => "Pisces",
             :religion => "Ut eu velit in augue blandit fermentum.",
@@ -1725,7 +1725,7 @@ User.create(:email => "danceyourassoff@wompasauria.com", :username =>
             :marital_status => "Seeing Someone", :diagnostic_status =>
 "Suspected", :orientation => "Straight", :looking_for => "Friends",
             :body_type => "Average", :smoke => "No", :drink => "No",
-:social_preference => "Small Groups", :sign => "Capricorn",
+:social_preference => "small-groups", :sign => "Capricorn",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1763,7 +1763,7 @@ User.create(:email => "Warple@goodocs.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Dating, Love",
             :body_type => "Average", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Taurus",
+:social_preference => "one-on-one", :sign => "Taurus",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1777,7 +1777,7 @@ User.create(:email => "Warple@goodocs.com", :username =>
 User.create(:email => "Throwaway@yourtv.com", :username =>
 "ModelD575", :password => "password", :password_confirmation =>
 "password",
-            :age => 18, :gender => "Gender Queer", :height_feet => 4,
+            :age => 18, :gender => "genderqueer", :height_feet => 4,
 :height_inches => 11, :weight => 100, :zipcode => "41945",
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Love",
@@ -1818,7 +1818,7 @@ User.create(:email => "Competition@rules.com", :username =>
             :age => 40, :gender => "Male", :height_feet => 6,
 :height_inches => 2, :weight => 220, :zipcode => "A2M 6C2",
             :marital_status => "Single", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Love",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Love",
             :body_type => "Full Figured", :smoke => "No", :drink => "No",
 :social_preference => "Social", :sign => "Capricorn",
             :religion => "Ut eu velit in augue blandit fermentum.",
@@ -1839,7 +1839,7 @@ User.create(:email => "Amazingsimulations@noper.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Gay", :looking_for => "Dating",
             :body_type => "Average", :smoke => "Yes", :drink => "Yes",
-:social_preference => "Small Groups", :sign => "Cancer",
+:social_preference => "small-groups", :sign => "Cancer",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1896,7 +1896,7 @@ User.create(:email => "Youareso@fdddd.com", :username =>
             :marital_status => "Single", :diagnostic_status =>
 "Confirmed", :orientation => "Straight", :looking_for => "Dating, Love",
             :body_type => "Curvy", :smoke => "No", :drink => "No",
-:social_preference => "One on One", :sign => "Taurus",
+:social_preference => "one-on-one", :sign => "Taurus",
             :religion => "Ut eu velit in augue blandit fermentum.",
             :about => "Ut eu velit in augue blandit fermentum.",
             :diagnosis_story => "Ut eu velit in augue blandit fermentum.",
@@ -1913,7 +1913,7 @@ User.create(:email => "psytrance@rules.com", :username =>
             :age => 19, :gender => "Male", :height_feet => 5,
 :height_inches => 7, :weight => 110, :zipcode => "47250",
             :marital_status => "Single", :diagnostic_status =>
-"Self Diagnosed", :orientation => "Straight", :looking_for => "Dating, Hook Ups",
+"self-diagnosed", :orientation => "Straight", :looking_for => "Dating, Hook Ups",
             :body_type => "Average", :smoke => "Yes", :drink => "Yes",
 :social_preference => "Social", :sign => "Aries",
             :religion => "Ut eu velit in augue blandit fermentum.",
