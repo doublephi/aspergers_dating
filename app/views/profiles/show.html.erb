@@ -1,4 +1,4 @@
-<font size="1" face="verdana">
+<!-- <font size="1" face="verdana">
 <table width="100%">
 	<tr>
 		<td><b>Username</b></td>
@@ -37,4 +37,94 @@
 		</td>
 	</tr>
 </table>
-</font>
+</font> -->
+
+<div id="left_column">
+		<% if @user.user_pictures.count > 0 %>
+			<h4 id="content_title_bar"> Pictures</h4>
+			<div id="pictures">
+				<% @user.user_pictures.each do |n| %>
+					<span class="picture_box"><%= image_tag n.picture.url(:thumb) %></span>			 
+				<% end %>
+			</div>
+		<% end %>
+	<h4 id="content_title_bar">Essays</h4>
+	<div id="profile_essays">
+		<dl>
+			<dt>About Me</dt>
+			<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi odio, sit amet imperdiet libero. Etiam pulvinar tortor nec lacus vulputate a imperdiet massa scelerisque. Nullam in leo lectus. Integer a urna ac ante fringilla tempor. Nulla eget neque ac orci vehicula placerat. Proin pharetra consectetur ligula vitae interdum. Phasellus accumsan ante nec nulla varius consequat. Fusce sodales, orci sit amet faucibus condimentum, ligula odio ultricies massa, quis congue mauris magna eget ante. Donec nisi nisi, sollicitudin et dignissim sed, fringilla vitae ipsum. Pellentesque venenatis, ante sit amet accumsan laoreet, dui leo congue ipsum, fermentum gravida tellus quam nec quam. Ut vel dolor a est volutpat vestibulum a a eros. In et quam eget neque dictum convallis. In eget dui quis diam adipiscing iaculis vel ac dolor. Etiam in velit risus, ac sagittis ante. Quisque vehicula convallis vehicula. </dd>
+			<dt>My Diagnosis</dt>
+			<dd>Asperger's Syndrome</dd>
+			<dt>Special Needs</dt>
+			<dd>None</dd>
+			<dt>Things I Do</dt>
+			<dd>Hockey, Talking, Movies (not in theaters!)</dd>
+			<dt>Things I Don't Do</dt>
+			<dd>Drive, Club, Party</dd>
+			<dt>Obsessions</dt>
+			<dd>Hockey, Physics, Computers</dd>
+			<dt>Who I'd Like To Meet</dt>
+			<dd>A nice LADY PERSON!</dd>
+			<dt>7 Things I Adore</dt>
+			<dd>Puppies, Kittens, Pizza, Music, Things, Stuff</dd>
+		</dl>
+	</div>
+</div>
+<div id="right_column">
+	<h4 id="content_title_bar">Basic Info</h4>
+	<div id="basic_info">
+		<table id="basic_info_table">
+			<tbody>
+				<tr>
+					<td class="left">Username</td>
+					<td class="right"><%= @user.username %></td>
+				</tr>
+				<tr>
+					<td class="left">Location</td>
+					<td class="right"><%= @user.zipcode %></td>
+				</tr>
+<!--				<tr>
+					<td class="left">Last Login</td>
+					<td class="right"><%= @user.last_sign_in_at %></td>
+				</tr>-->
+				<tr>
+					<td class="left">Status</td>
+					<td class="right">Single</td>
+				</tr>
+				<tr>
+					<td class="left">Age</td>
+					<td class="right"><%= @user.age %></td>
+				</tr>
+				<tr>
+					<td class="left">Height</td>
+					<td class="right"><%= @user.height_feet %>' <%= @user.height_inches %>"</td>
+				</tr>
+				<tr>
+					<td class="left">Weight</td>
+					<td class="right"><%= @user.weight %></td>
+				</tr>
+				<tr>
+					<td class="left">Smokes</td>
+					<td class="right">No</td>
+				</tr>
+				<tr>
+					<td class="left">Drinks</td>
+					<td class="right">No</td>
+				</tr>
+				<tr>
+					<td class="left">Religion</td>
+					<td class="right">Atheism</td>
+				</tr>
+				<tr>
+					<td class="left">Sign</td>
+					<td class="right">Taurus</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h4 id="content_title_bar">Advertisement</h4>
+	<div id="tall_banner_container">
+		<div id="tall_banner">
+		</div>
+	</div>
+</div>

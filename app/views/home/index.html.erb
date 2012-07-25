@@ -1,12 +1,8 @@
-<% if user_signed_in? %>
-	Logged in as <%= current_user.username %> | 
-	<%= link_to "Log Out", destroy_user_session_path, :method => "delete" %>
-	<p align="justify"><font face="verdana" size="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat 
-	scelerisque venenatis. Etiam pulvinar sem lectus, sit amet fringilla lorem. Sed odio sem, pulvinar et ultrices eu, 
-	tincidunt sit amet est. Praesent ullamcorper, ipsum sit amet hendrerit ornare, sem tortor ornare justo, faucibus placerat 
-	ante mi at leo. Phasellus interdum bibendum euismod. Curabitur nisi purus, faucibus at hendrerit ut, venenatis quis urna. 
-	Pellentesque sem nunc, venenatis faucibus elementum.</font></p>
-<% else %>
-	<%= link_to "Sign Up", new_user_registration_path %> or
-	<%= link_to "Log In", new_user_session_path %>
-<% end %>
+<h4 id="content_title_bar">Newest Users</h4>
+<div id="newest_users">
+	<p>
+		<% @new_users.each do |n| %>
+			<%= n.username %><br />
+		<% end %>
+	</p>
+</div>

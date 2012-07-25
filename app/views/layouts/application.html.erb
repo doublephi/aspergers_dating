@@ -3,75 +3,57 @@
 <head>
   <title>Warple</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "thats_amore.css", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	
-<% flash.each do |name, msg| %>
+<!-- TODO: Find a new spot for flash messages -->
+<!-- <% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
+<% end %> -->
 
-<table width="1148" align="center" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td height="2" width="100%" bgcolor="#000000"></td>
-	</tr>
-	<tr>
-		<td>
-			<table cellpadding="0" cellspacing="0" border="0">
-				<tr>
-					<td width="2" bgcolor="#000000"></td>
-					<td width="1144" height="96" align="center" valign="middle">ASPIE AMORE</td>
-					<td width="2" bgcolor="#000000"></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td height="2" width="100%" bgcolor="#000000"></td>
-	</tr>
-	<tr>
-		<td>
-			<table cellpadding="0" cellspacing="0" border="0" height="30">
-				<tr>
-					<td width="2" bgcolor="#000000"></td>
-					<td><%= link_to image_tag("home.jpg", :alt => "Home"), root_path %></td>
-					<td width="2" bgcolor="#000000"></td>
-					<td><%= image_tag "messages.jpg", :alt => "Messages" %></td>
-					<td><%= image_tag "mystuff.jpg", :alt => "My Stuff" %></td>
-					<td><%= link_to image_tag("search.jpg", :alt => "Search"), browse_path %></td>
-					<td><%= image_tag "community.jpg", :alt => "Community" %></td>
-					<td><%= image_tag "help.jpg", :alt => "Help" %></td>
-					<td width="1"></td>
-					<td width="2" bgcolor="#000000"></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td height="2" width="100%" bgcolor="#000000"></td>
-	</tr>
-	<tr>
-		<td>
-			<table cellpadding="0" cellspacing="0" border="0">
-				<tr>
-					<td width="2" bgcolor="#000000"></td>
-					<td width="146" valign="top">
-						<b><u>Online Friends:</u></b><br />
-						<b><u>Online Favorites:</u></b>
-					</td>
-					<td width="2" bgcolor="#000000"></td>
-					<td width="996" align="left" valign="top">
+		<div id="wrapper">
+			<div id="top_bar">
+				<% if user_signed_in? %>
+					Signed in as <b><%= current_user.username %></b> | <%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %>
+				<% end %>
+			</div>
+			<div id="title_bg">
+				<%= image_tag "title.png", :alt => "AspieAmore" %>
+					<% unless user_signed_in? %>
+						<div id="login">
+							<%= form_for("user", :url => user_session_path) do |f| %>
+								<%= f.email_field :email, :class => "input", :size => 20, :value => "Email Address" %>
+								<%= f.password_field :password, :class => "input", :size => 20, :value => "Password" %>
+								<%= f.submit "Sign In" %>
+							<% end %>
+						</div>
+					<% end %>
+			</div>
+			<div id="menu_top"></div>
+			<div id="menu">
+				<div id="menu_left"></div>
+				<div id="menu_button"><p>Home</p></div>
+				<div id="menu_button"><p>Messages</p></div>
+				<div id="menu_button"><p>My Stuff</p></div>
+				<div id="menu_button"><p>Search</p></div>
+				<div id="menu_button"><p>Community</p></div>
+				<div id="menu_button"><p>Help</p></div>
+				<div id="menu_right"></div>
+			</div>
+			<div id="menu_bottom"></div>
+			<div id="under_menu_shadow"></div>
+			<div id="main_container">
+				<div id="main">
 						<%= yield %>
-					</td>
-					<td width="2" bgcolor="#000000"></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td height="2" width="100%" bgcolor="#000000"></td>
-	</tr>
-</table>
-</body>
+				</div>
+			<br class="clear"/>
+			</div>
+			<div id="bottom_bar">
+			</div>
+			<div id="copyright_bar">AspieAmore &copy;2012 - Programmed in Ruby</div>
+		</div>
+	</body>
 </html>
