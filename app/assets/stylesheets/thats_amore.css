@@ -105,6 +105,16 @@ body
 	width: 133px;
 	height: 33px;
 }
+#menu_button a
+{
+	color: #000;
+	text-decoration: none;
+}
+#menu_button a:hover
+{
+	color: #000;
+	text-decoration: underline;
+}
 #menu_right
 {
 	width: 44px;
@@ -308,6 +318,107 @@ body
 {
 	width: 99%;
 	margin: 0 auto;
+}
+#search_criteria
+{
+	font: 12px verdana, sans-serif;
+	text-align: justify;
+	text-justify: inter-word;
+	background: #fff;
+	border-left: 1px solid #d7ceab;
+	border-right: 1px solid #d7ceab;
+	border-bottom: 1px solid #d7ceab;
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+}
+#search_criteria p
+{
+	width: 99%;
+	margin: 0 auto;
+}
+#search_criteria input
+{
+	border: 1px solid #000;
+}
+#search_results
+{
+	font: 12px verdana, sans-serif;
+	text-align: justify;
+	text-justify: inter-word;
+	background: #fff;
+	border-left: 1px solid #d7ceab;
+	border-right: 1px solid #d7ceab;
+	border-bottom: 1px solid #d7ceab;
+	width: 100%;
+	float: left;
+}
+#search_results p
+{
+	width: 99%;
+	margin: 0 auto;
+}
+#basic_search
+{
+	font: 12px verdana, sans-serif;
+	background: #fff;
+	border-left: 1px solid #d7ceab;
+	border-right: 1px solid #d7ceab;
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+}
+#basic_search input
+{
+	border: 1px solid #000;
+}
+#result_badge
+{
+/*	margin: 0 auto;*/
+}
+#top_badge
+{
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 100%;
+}
+#user_pic
+{
+	float: left;
+}
+#user_pic img
+{
+	border: 1px solid #d7ceab;
+}
+#user_info
+{
+	padding-left: 5px;
+	float: left;
+}
+#user_info a
+{
+	color: #1c699d;
+	text-decoration: none;
+}
+#user_info a:hover
+{
+	color: #1c699d;
+	text-decoration: underline;
+}
+#bottom_badge
+{
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #d7ceab;
+	margin-bottom: 10px;
+	padding-bottom: 3px;
+}
+#search_pagination
+{
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding-bottom: 8px;
 }
 .clear
 {

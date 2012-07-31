@@ -1,150 +1,211 @@
-<%= form_tag browse_path, :method => :get do %>
-	<table>
-		<tr>
-			<td>City and State or ZIP / Miles:</td>
-			<td>
-				<%= text_field_tag :place, params[:place] %>
-				<%= select("distance", "miles", %w[5 10 15 20 25 50 100 250 500 1000 5000 24901.55], {}, { :index => nil }) %>
-			</td>
-		</tr>
-		<tr>
-			<td>Username:</td>
-			<td><%= text_field_tag :username, params[:username] %></td>
-		</tr>
-		<tr>
-			<td>Keyword:</td>
-			<td><%= text_field_tag :keyword, params[:keyword]%></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Gender:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'gender[]', 'male'%> Male</td>
-							<td><%= check_box_tag 'gender[]', 'female'%> Female</td>
-						</tr>
-						<tr>
-							<td><%= check_box_tag 'gender[]', 'genderqueer' %> Genderqueer</td>
-							<td><%= check_box_tag 'gender[]', 'trans' %> Transgendered</td>
-							<td></td>
-						</tr>
-					</table>
+<div id="left_column">
+	<h4 id="content_title_bar">Search Criteria</h4>
+	<div id="search_criteria">
+		<p>
+			<%= form_tag browse_path, :method => :get do %>
+				<table>
+					<tr>
+						<td>City and State or ZIP / Miles:</td>
+						<td>
+							<%= text_field_tag :place, params[:place] %>
+							<%= select("distance", "miles", %w[5 10 15 20 25 50 100 250 500 1000 5000 24901.55], {}, { :index => nil }) %>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							Gender:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'gender[]', 'male'%> Male</td>
+										<td><%= check_box_tag 'gender[]', 'female'%> Female</td>
+									</tr>
+									<tr>
+										<td><%= check_box_tag 'gender[]', 'genderqueer' %> Genderqueer</td>
+										<td><%= check_box_tag 'gender[]', 'trans' %> Transgendered</td>
+										<td></td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+					</tr>
+	<!--				<tr>
+						<td colspan="2">
+							Diagnostic Status:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'diagnosis[]', 'confirmed' %> Confirmed</td>
+										<td><%= check_box_tag 'diagnosis[]', 'self-diagnosed' %> Self-Diagnosed</td>
+									</tr>
+									<tr>
+										<td><%= check_box_tag 'diagnosis[]', 'suspected' %> Suspected</td>
+										<td><%= check_box_tag 'diagnosis[]', 'nt' %> Neurotypical</td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+		</tr>-->
+					<tr>
+						<td colspan="2">
+							Orientation:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'orientation[]', 'straight' %> Straight</td>
+										<td><%= check_box_tag 'orientation[]', 'gay' %> Gay</td>
+										<td><%= check_box_tag 'orientation[]', 'bisexual' %> Bisexual</td>
+									</tr>
+									<tr>
+										<td><%= check_box_tag 'orientation[]', 'queer' %> Queer</td>
+										<td><%= check_box_tag 'orientation[]', 'trans' %> Trans</td>
+										<td><%= check_box_tag 'orientation[]', 'asexual' %> Asexual</td>
+										<td></td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+					</tr>
+	<!--				<tr>
+						<td colspan="2">
+							Looking For:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'lookingfor[]', 'love' %> Love</td>
+										<td><%= check_box_tag 'lookingfor[]', 'dating' %> Dating</td>
+										<td><%= check_box_tag 'lookingfor[]', 'friends' %> Friends</td>
+										<td><%= check_box_tag 'lookingfor[]', 'hook-ups' %> Hook-Ups</td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+		</tr>-->
+	<!--				<tr>
+						<td colspan="2">
+							Social Preference:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'socialpref[]', 'social' %> Social</td>
+										<td><%= check_box_tag 'socialpref[]', 'sometimes' %> Sometimes Social</td>
+									</tr>
+									<tr>
+										<td><%= check_box_tag 'socialpref[]', 'small-groups' %> Small Groups Only</td>
+										<td><%= check_box_tag 'socialpref[]', 'one-on-one' %> One on One</td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+		</tr>-->
+					<tr>
+						<td colspan="2">
+							Smoker:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'smoke[]', 'yes' %> Yes</td>
+										<td><%= check_box_tag 'smoke[]', 'no' %> No</td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							Drinker:
+							<%= field_set_tag do %>
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td><%= check_box_tag 'drink[]', 'yes' %> Yes</td>
+										<td><%= check_box_tag 'drink[]', 'no' %> No</td>
+									</tr>
+								</table>
+							<% end %>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><%= submit_tag "Browse", :name => nil %></td>
+					</tr>
+				</table>
+			<% end %>
+		</p>
+	</div>
+	<h4 id="content_title_bar">Results</h4>
+	<div id="search_results">
+		<% for user in @users %>
+			<div id="result_badge">
+				<div id="top_badge">
+					<div id="user_pic">
+						<% if user.user_pictures.count > 0 %>
+							<%= image_tag user.user_pictures.first.picture.url(:thumb) %>
+						<% else %>
+							<%= image_tag "no_pic_thumb.jpg" %>
+						<% end %>
+					</div>
+					<div id="user_info">
+						<b><%= link_to "#{user.username}", user_path(user) %></b><br />
+						<%= user.age %> / <%= user.gender %> / <%= user.orientation %> / <%= user.marital_status %><br />
+						48116
+					</div>
+				</div>
+				<div id="bottom_badge">
+					<p><b><font color="#1c699d">About:</font></b></v> <%= truncate(user.about, :length => 250) %></p>
+				</div>
+			</div>
+		<% end %>
+		<div id="search_pagination">
+			<%= will_paginate @users %>
+		</div>
+<!-- 		<p>
+			<table>
+				<tr>
+					<th></th>
+					<th>Username</th>
+					<th>About</th>
+				</tr>
+				<% for user in @users %>
+					<tr>
+						<td width="100" height="100">
+							<% if user.user_pictures.count > 0 %>
+								<%= image_tag user.user_pictures.first.picture.url(:thumb) %>
+							<% else %>
+								<%= image_tag "no_pic_thumb.jpg" %>
+							<% end %>
+						</td>
+						<td><%= user.username %></td>
+						<td><%= user.about %></td>
+					</tr>
 				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Diagnostic Status:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'diagnosis[]', 'confirmed' %> Confirmed</td>
-							<td><%= check_box_tag 'diagnosis[]', 'self-diagnosed' %> Self-Diagnosed</td>
-						</tr>
-						<tr>
-							<td><%= check_box_tag 'diagnosis[]', 'suspected' %> Suspected</td>
-							<td><%= check_box_tag 'diagnosis[]', 'nt' %> Neurotypical</td>
-						</tr>
-					</table>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Orientation:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'orientation[]', 'straight' %> Straight</td>
-							<td><%= check_box_tag 'orientation[]', 'gay' %> Gay</td>
-							<td><%= check_box_tag 'orientation[]', 'bisexual' %> Bisexual</td>
-						</tr>
-						<tr>
-							<td><%= check_box_tag 'orientation[]', 'queer' %> Queer</td>
-							<td><%= check_box_tag 'orientation[]', 'trans' %> Trans</td>
-							<td><%= check_box_tag 'orientation[]', 'asexual' %> Asexual</td>
-							<td></td>
-						</tr>
-					</table>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Looking For:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'lookingfor[]', 'love' %> Love</td>
-							<td><%= check_box_tag 'lookingfor[]', 'dating' %> Dating</td>
-							<td><%= check_box_tag 'lookingfor[]', 'friends' %> Friends</td>
-							<td><%= check_box_tag 'lookingfor[]', 'hook-ups' %> Hook-Ups</td>
-						</tr>
-					</table>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Social Preference:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'socialpref[]', 'social' %> Social</td>
-							<td><%= check_box_tag 'socialpref[]', 'sometimes' %> Sometimes Social</td>
-						</tr>
-						<tr>
-							<td><%= check_box_tag 'socialpref[]', 'small-groups' %> Small Groups Only</td>
-							<td><%= check_box_tag 'socialpref[]', 'one-on-one' %> One on One</td>
-						</tr>
-					</table>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Smoker:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'smoke[]', 'yes' %> Yes</td>
-							<td><%= check_box_tag 'smoke[]', 'no' %> No</td>
-						</tr>
-					</table>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Drinker:
-				<%= field_set_tag do %>
-					<table cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td><%= check_box_tag 'drink[]', 'yes' %> Yes</td>
-							<td><%= check_box_tag 'drink[]', 'no' %> No</td>
-						</tr>
-					</table>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><%= submit_tag "Browse", :name => nil %></td>
-		</tr>
-	</table>
-<% end %>
-
-<table>
-	<tr>
-		<th>Username</th>
-		<th>Zip Code</th>
-	</tr>
-	<% for user in @users %>
-		<tr>
-			<td><%= user.username %></td>
-			<td><%= user.zipcode %></td>
-		</tr>
-	<% end %>
-</table>
-<%= will_paginate @users %>
+			</table>
+			<%= will_paginate @users %>
+		</p> -->
+	</div>
+</div>
+<div id="right_column">
+	<h4 id="content_title_bar">Basic Search</h4>
+	<div id="basic_search">
+		<%= form_tag browse_path, :method => :get do %>
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td><%= text_field_tag :username, params[:username], :size => 16 %></td>
+				</tr>
+				<tr>
+					<td>Keyword:</td>
+					<td><%= text_field_tag :keyword, params[:keyword], :size => 16 %></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><%= submit_tag "Basic Search", :name => nil %></td>
+				</tr>
+			</table>
+		<% end %>
+	</div>
+	<h4 id="content_title_bar">Advertisement</h4>
+	<div id="tall_banner_container">
+		<div id="tall_banner">
+		</div>
+	</div>
+</div>
