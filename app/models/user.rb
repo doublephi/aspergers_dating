@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_many :user_pictures
   
+  #mailboxer
+  acts_as_messageable
+  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
