@@ -1,0 +1,26 @@
+<div id="left_column">
+  <h4 id="content_title_bar">Inbox</h4>
+  <div id="newest_users">
+    <table width="100%">
+      <tr>
+        <th>Topic</th>
+        <th>Sender</th>
+        <th>Received</th>
+      </tr>
+      <% @messages.each do |f| %>
+        <tr>
+          <td><%= link_to f.topic, message_path(f) %></td>
+          <td><%= link_to User.find_by_id(f.sent_messageable_id).username, user_path(f.sent_messageable_id) %></td>
+          <td><%= f.created_at.strftime("%m/%d/%Y %I:%M %p") %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<div id="right_column">
+  <h4 id="content_title_bar">Advertisement</h4>
+  <div id="tall_banner_container">
+    <div id="tall_banner">
+    </div>
+  </div>
+</div>

@@ -1,8 +1,17 @@
-<h4 id="content_title_bar">Newest Users</h4>
-<div id="newest_users">
-	<p>
-		<% @new_users.each do |n| %>
-			<%= n.username %><br />
-		<% end %>
-	</p>
+<div id="left_column">
+  <h4 id="content_title_bar">Newest Users</h4>
+  <div id="newest_users">
+    <p>
+      <% @new_users.each do |n| %>
+        <%= link_to n.username, user_path(n.id) %><br/>
+      <% end %>
+    </p>
+  </div>
+</div>
+<div id="right_column">
+  <h4 id="content_title_bar">Advertisement</h4>
+  <div id="tall_banner_container">
+    <div id="tall_banner">
+    </div>
+  </div>
 </div>

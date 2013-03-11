@@ -1,3 +1,27 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#sending, #sent").hide();
+    $(".send_message_button").click(function(){
+      $(".send_message_form_form").hide();
+      $("#sending").show();
+      
+      $.post("/send_message", $("form.send_message_form_form").serialize(), function(data) {
+        console.log(data);
+      })
+      .done(function() {
+        console.log("success!");
+        $("#sending").hide();
+        $("#sent").show();
+      })
+      .fail(function() {
+        console.log("failed!"); //TODO: error-handling, message to user in GUI
+      });
+      
+//      alert("PUDDING!");
+      return false; //prevent form from submitting
+    });
+  });
+</script>
 <div id="left_column">
 		<% if @user.user_pictures.count > 0 %>
 			<h4 id="content_title_bar"> Pictures</h4>
@@ -11,23 +35,34 @@
 	<div id="profile_essays">
 		<dl>
 			<dt>About Me</dt>
-			<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi odio, sit amet imperdiet libero. Etiam pulvinar tortor nec lacus vulputate a imperdiet massa scelerisque. Nullam in leo lectus. Integer a urna ac ante fringilla tempor. Nulla eget neque ac orci vehicula placerat. Proin pharetra consectetur ligula vitae interdum. Phasellus accumsan ante nec nulla varius consequat. Fusce sodales, orci sit amet faucibus condimentum, ligula odio ultricies massa, quis congue mauris magna eget ante. Donec nisi nisi, sollicitudin et dignissim sed, fringilla vitae ipsum. Pellentesque venenatis, ante sit amet accumsan laoreet, dui leo congue ipsum, fermentum gravida tellus quam nec quam. Ut vel dolor a est volutpat vestibulum a a eros. In et quam eget neque dictum convallis. In eget dui quis diam adipiscing iaculis vel ac dolor. Etiam in velit risus, ac sagittis ante. Quisque vehicula convallis vehicula. </dd>
+			<dd><%= @user.about %></dd>
 			<dt>My Diagnosis</dt>
-			<dd>Asperger's Syndrome</dd>
+			<dd><%= @user.diagnosis_story %></dd>
 			<dt>Special Needs</dt>
-			<dd>None</dd>
+			<dd><%= @user.special_needs %></dd>
 			<dt>Things I Do</dt>
-			<dd>Hockey, Talking, Movies (not in theaters!)</dd>
+			<dd><%= @user.things_i_do %></dd>
 			<dt>Things I Don't Do</dt>
-			<dd>Drive, Club, Party</dd>
+			<dd><%= @user.things_i_dont_do %></dd>
 			<dt>Obsessions</dt>
-			<dd>Hockey, Physics, Computers</dd>
+			<dd><%= @user.obsessions %></dd>
 			<dt>Who I'd Like To Meet</dt>
-			<dd>A nice LADY PERSON!</dd>
+			<dd><%= @user.who_id_like_to_meet %></dd>
 			<dt>7 Things I Adore</dt>
-			<dd>Puppies, Kittens, Pizza, Music, Things, Stuff</dd>
+			<dd><%= @user.seven_things_i_adore %></dd>
 		</dl>
 	</div>
+	<h4 id="content_title_bar">Want to talk to <%= @user.username %>?</h4>
+  <div id="send_message_form">
+    <%= form_tag send_message_path, :class => "send_message_form_form", :remote => true do %>
+      Subject: <%= text_field_tag :topic %><br/>
+      Message: <%= text_area_tag :body %><br/>
+      <%= hidden_field_tag :recipient_id, @user.id %>
+      <%= submit_tag "Send Message", :class => "send_message_button" %>
+    <% end %>
+    <p id="sending">Sending...</p>
+    <p id="sent">Successfully sent!</p>
+  </div>
 </div>
 <div id="right_column">
 	<h4 id="content_title_bar">Basic Info</h4>
@@ -48,7 +83,7 @@
 				</tr>-->
 				<tr>
 					<td class="left">Status</td>
-					<td class="right">Single</td>
+					<td class="right"><%= @user.marital_status %></td>
 				</tr>
 				<tr>
 					<td class="left">Age</td>
@@ -64,19 +99,19 @@
 				</tr>
 				<tr>
 					<td class="left">Smokes</td>
-					<td class="right">No</td>
+					<td class="right"><%= @user.smoke %></td>
 				</tr>
 				<tr>
 					<td class="left">Drinks</td>
-					<td class="right">No</td>
+					<td class="right"><%= @user.drink %></td>
 				</tr>
 				<tr>
 					<td class="left">Religion</td>
-					<td class="right">Atheism</td>
+					<td class="right"><%= @user.religion %></td>
 				</tr>
 				<tr>
 					<td class="left">Sign</td>
-					<td class="right">Taurus</td>
+					<td class="right"><%= @user.sign %></td>
 				</tr>
 			</tbody>
 		</table>

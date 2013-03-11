@@ -20,6 +20,12 @@ class User < ActiveRecord::Base
   # geocoding
   geocoded_by :zipcode
   after_validation :geocode, :if => :zipcode_changed?
+  
+  # messaging
+  acts_as_messageable :table_name => "messages",          # default 'messages'
+                      :required   => [:topic, :body]               # default [:topic, :body]
+                      # :class_name => "CustomMessages",  # default "ActsAsMessageable::Message",
+                      # :dependent  => :destroy           # default :nullify
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :zipcode,

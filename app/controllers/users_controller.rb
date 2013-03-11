@@ -23,6 +23,17 @@ class UsersController < Devise::RegistrationsController
     end
   end
   
+  # def inbox
+    # @messages = current_user.received_messages
+  # end
+#   
+  # def message
+    # @message = current_user.received_messages.with_id(params[:id])
+    # puts "---message---"
+    # puts @message.message.to_xml
+    # puts "-------------"
+  # end
+  
   # def show
     # @user = User.find(params[:id])
   # end

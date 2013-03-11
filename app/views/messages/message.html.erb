@@ -1,0 +1,66 @@
+<div id="left_column">
+  <h4 id="content_title_bar">Message</h4>
+  <div id="newest_users">
+    <p>
+      <%= @message.body %>
+    </p>
+  </div>
+</div>
+<div id="right_column">
+  <h4 id="content_title_bar">Sender Info</h4>
+  <div id="basic_info">
+    <table id="basic_info_table">
+      <tbody>
+        <tr>
+          <td class="left">Username</td>
+          <td class="right"><%= @sender.username %></td>
+        </tr>
+        <tr>
+          <td class="left">Location</td>
+          <td class="right"><%= @sender.zipcode %></td>
+        </tr>
+<!--        <tr>
+          <td class="left">Last Login</td>
+          <td class="right"><%= @sender.last_sign_in_at %></td>
+        </tr>-->
+        <tr>
+          <td class="left">Status</td>
+          <td class="right"><%= @sender.marital_status %></td>
+        </tr>
+        <tr>
+          <td class="left">Age</td>
+          <td class="right"><%= @sender.age %></td>
+        </tr>
+        <tr>
+          <td class="left">Height</td>
+          <td class="right"><%= @sender.height_feet %>' <%= @sender.height_inches %>"</td>
+        </tr>
+        <tr>
+          <td class="left">Weight</td>
+          <td class="right"><%= @sender.weight %></td>
+        </tr>
+        <tr>
+          <td class="left">Smokes</td>
+          <td class="right"><%= @sender.smoke %></td>
+        </tr>
+        <tr>
+          <td class="left">Drinks</td>
+          <td class="right"><%= @sender.drink %></td>
+        </tr>
+        <tr>
+          <td class="left">Religion</td>
+          <td class="right"><%= @sender.religion %></td>
+        </tr>
+        <tr>
+          <td class="left">Sign</td>
+          <td class="right"><%= @sender.sign %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h4 id="content_title_bar">Advertisement</h4>
+  <div id="tall_banner_container">
+    <div id="tall_banner">
+    </div>
+  </div>
+</div>
