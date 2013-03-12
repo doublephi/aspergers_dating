@@ -1,9 +1,43 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#sending, #sent").hide();
+    $(".reply_message_button").click(function(){
+      $(".reply_message_form_form").hide();
+      $("#sending").show();
+      
+      $.post("/reply_message", $("form.reply_message_form_form").serialize(), function(data) {
+        console.log(data);
+      })
+      .done(function() {
+        console.log("success!");
+        $("#sending").hide();
+        $("#sent").show();
+      })
+      .fail(function() {
+        console.log("failed!"); //TODO: error-handling, message to user in GUI
+      });
+      
+      return false; //prevent form from submitting
+    });
+  });
+</script>
 <div id="left_column">
   <h4 id="content_title_bar">Message</h4>
-  <div id="newest_users">
+  <div id="message_message">
     <p>
       <%= @message.body %>
     </p>
+  </div>
+  <h4 id="content_title_bar">Want to reply to <%= @sender.username %>?</h4>
+  <div id="reply_message_form">
+    <%= form_tag reply_message_path, :class => "reply_message_form_form", :remote => true do %>
+      <%= hidden_field_tag :topic, @message.topic %>
+      Message: <%= text_area_tag :body %><br/>
+      <%= hidden_field_tag :recipient_id, @sender.id %>
+      <%= submit_tag "Send Message", :class => "reply_message_button" %>
+    <% end %>
+    <p id="sending">Sending...</p>
+    <p id="sent">Successfully sent!</p>
   </div>
 </div>
 <div id="right_column">

@@ -12,6 +12,7 @@ AspergersDating::Application.routes.draw do
   end
   
   match "send_message" => "messages#send_message"
+  match "reply_message" => "messages#reply_message"
 #  match "messages/inbox" => "messages#inbox" #"home#index" #"messaging#inbox"
 #  match "messages/message/:id" => "messages#message" #"home#index" #"messaging#show"
 

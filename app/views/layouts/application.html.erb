@@ -37,7 +37,14 @@
 			<div id="menu">
 				<div id="menu_left"></div>
 				<div id="menu_button"><p><%= link_to "Home", root_path %></p></div>
-				<div id="menu_button"><p><%= link_to "Messages", inbox_path %></p></div>
+				<div id="menu_button">
+				  <p>
+				    <%= link_to "Messages ", inbox_path %>
+            <% if current_user.received_messages.unreaded.count > 0 %>
+              (<%= current_user.received_messages.unreaded.count %>)
+            <% end %>
+				  </p>
+				</div>
 				<div id="menu_button"><p>My Stuff</p></div>
 				<div id="menu_button"><p><%= link_to "Search", browse_path %></p></div>
 				<div id="menu_button"><p>Community</p></div>
