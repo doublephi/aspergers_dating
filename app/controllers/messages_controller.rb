@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
   
   def inbox
     @messages = current_user.received_messages
-    @unread_messages = @messages.unreaded.count
   end
   
   def message
@@ -25,8 +24,7 @@ class MessagesController < ApplicationController
   end
   
   def reply_message
-    puts "--reply_message--"
-    puts params.to_xml
+    #TODO: error-checking and error handling
     
     @recipient = User.find_by_id(params[:recipient_id])
     
@@ -34,6 +32,17 @@ class MessagesController < ApplicationController
     
     respond_to do |format|
       format.js {render :nothing => true}
+    end
+  end
+  
+  def delete_message
+    #TODO: error-checking and error handling
+    
+    @message = current_user.received_messages.with_id(params[:id]).first
+    current_user.delete_message(@message)
+    
+    respond_to do |format|
+      format.html {redirect_to inbox_path}
     end
   end
 end

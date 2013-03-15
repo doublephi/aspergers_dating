@@ -25,7 +25,8 @@
   <h4 id="content_title_bar">Message</h4>
   <div id="message_message">
     <p>
-      <%= @message.body %>
+      <%= @message.body %><br/>
+      <%= button_to "Delete Message", delete_message_path(@message), :method => "get" %>
     </p>
   </div>
   <h4 id="content_title_bar">Want to reply to <%= @sender.username %>?</h4>
