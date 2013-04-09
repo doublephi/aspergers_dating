@@ -4,6 +4,7 @@ AspergersDating::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => "users"}
   
   devise_scope :user do
+    get "users/new_user", :to => "users#new", :as => :sign_up
     get "users/browse", :to => "profiles#browse", :as => :browse
     get "users/:id", :to => "profiles#show", :as => :user
     get "inbox", :to => "messages#inbox", :as => :inbox

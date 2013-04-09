@@ -19,6 +19,8 @@
 			<div id="top_bar">
 				<% if user_signed_in? %>
 					Signed in as <b><%= current_user.username %></b> | <%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %>
+				<% else %>
+				  <%= link_to "Sign Up", sign_up_path %>
 				<% end %>
 			</div>
 			<div id="title_bg">

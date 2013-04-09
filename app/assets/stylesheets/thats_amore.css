@@ -186,6 +186,19 @@ body
 	width: 70%;
 	float: left;
 }
+#new_user
+{
+  font: 12px verdana, sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+  background: #fff;
+  border-left: 1px solid #d7ceab;
+  border-right: 1px solid #d7ceab;
+  border-bottom: 1px solid #d7ceab;
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
 #pictures
 {
 	font: 12px verdana, sans-serif;
